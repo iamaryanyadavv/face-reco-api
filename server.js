@@ -35,6 +35,6 @@ app.get('/profile/:id', (req,res)=>{ profile.profileGetHandler(req, res, db, bcr
 
 app.put('/image',(req,res)=>{ image.imageHandler(req, res, db, bcrypt) })
 
-app.listen(3000, ()=>{
-    console.log('running on port 3000')
+app.listen(process.env.PORT || 3000, ()=>{
+    console.log(`running on port ${process.env.PORT}`)
 })
